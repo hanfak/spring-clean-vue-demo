@@ -3,19 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
     </head>
 
     <body>
-        <div class="row">
-            <div class="twelve columns">
-                <div class="four columns offset-by-five">
-                    <h1>Blogs</h1>
-                </div>
-            </div>
+        <div id="app">
+            <h2>Todos:</h2>
+            <ol>
+                <li v-for="todo in todos">
+                    <label>
+
+                        {{todo.done}}
+
+
+                        {{ todo.text }}
+                    </label>
+                </li>
+            </ol>
         </div>
     </body>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+          el: "#app",
+          data: {
+            todos: [
+              { text: "Learn JavaScript", done: false },
+              { text: "Learn Vue", done: false },
+              { text: "Build something awesome", done: true }
+            ]
+          },
+          methods: {
+            toggle: function(todo){
+                todo.done = !todo.done
+            }
+          }
+        })
+    </script>
 </html>

@@ -9,7 +9,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @Controller
 public class BlogSearchVueEndPoint {
 
-    public static final String VUE_API_PATH = "/";
+    public static final String VUE_API_PATH = "/blogs";
     private final GetAllBlogPostsUsecase getAllBlogPostsUsecase;
 
     public BlogSearchVueEndPoint(GetAllBlogPostsUsecase getAllBlogPostsUsecase) {
