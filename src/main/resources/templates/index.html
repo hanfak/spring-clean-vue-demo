@@ -27,24 +27,5 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://vuejs.org/js/vue.js"></script>
-
-    <script>
-        new Vue({
-            el: '#root',
-            data : {
-                posts: []
-            },
-            mounted(){
-                this.fetchPosts();
-            },
-            methods: {
-                fetchPosts(){
-                    axios.get("/index")
-                        .then(function(response) {
-                            this.posts = response.data;
-                    }.bind(this));
-                }
-            }
-        });
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </html>
