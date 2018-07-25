@@ -15,7 +15,7 @@ public class EndpointConfiguration {
     }
 
     @Bean
-    public BlogSearchVueEndPoint blogSearchVueEndPoint(GetAllBlogPostsUsecase getAllBlogPostsUsecase) {
-        return new BlogSearchVueEndPoint(getAllBlogPostsUsecase);
+    public BlogSearchVueEndPoint blogSearchVueEndPoint() {
+        return new BlogSearchVueEndPoint();
     }
 }
