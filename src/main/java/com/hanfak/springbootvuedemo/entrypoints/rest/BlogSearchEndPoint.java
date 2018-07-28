@@ -13,7 +13,6 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class BlogSearchEndPoint {
 
     public static final String API_PATH = "/index";
-    public static final String VUE_API_PATH = "/";
     private final GetAllBlogPostsUsecase getAllBlogPostsUsecase;
 
     public BlogSearchEndPoint(GetAllBlogPostsUsecase getAllBlogPostsUsecase) {

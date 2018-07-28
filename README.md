@@ -6,3 +6,9 @@
 - Show links, can click link, and pop will show data,
     - show preview when clicked
 - Split front end and back end into separate packages
+
+NOTES:
+
+- No controller created, but index.html in resources/public/ it will show this file
+- No controller created, but index.html in resources/ it will show index file from resources/template/
+-
