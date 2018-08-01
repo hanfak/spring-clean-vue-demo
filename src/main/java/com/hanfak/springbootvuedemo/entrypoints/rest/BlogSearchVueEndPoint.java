@@ -14,7 +14,7 @@ public class BlogSearchVueEndPoint {
 
     @RequestMapping(value = VUE_API_PATH, method = GET)
     public String indexVue() {
-        return "index";
+        return "index1";
     }
 
     @RequestMapping(value = VUE_SEARCH_API_PATH, method = GET)

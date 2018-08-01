@@ -9,6 +9,6 @@
 
 NOTES:
 
-- No controller created, but index.html in resources/public/ it will show this file
-- No controller created, but index.html in resources/ it will show index file from resources/template/
+- No controller created, but index1.html in resources/public/ it will show this file
+- No controller created, but index1.html in resources/ it will show index file from resources/template/
 -

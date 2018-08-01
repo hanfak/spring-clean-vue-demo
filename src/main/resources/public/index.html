@@ -1,1 +1,38 @@
-gekki
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+</head>
+
+<body>
+<div id="app">
+    <router-view/>
+</div>
+
+<template id="list-template">
+    <ul>
+        <li v-for="post in posts">
+
+            <router-link :to="{ name: 'post', params: { id: post.id }}">
+                {{post.title}}
+            </router-link>
+        </li>
+    </ul>
+</template>
+<template id="post-template">
+    <div>
+        <router-link :to="{ name: 'homepage' }">Homepage</router-link>
+        <h3>{{post.title}}</h3>
+        {{post.body}}
+    </div>
+</template>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://vuejs.org/js/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.5.3/vue-router.js"></script>
+<script type="text/javascript" src="/static/script1.js"></script>
+</body>
+
+</html>
