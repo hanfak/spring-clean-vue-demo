@@ -1,5 +1,7 @@
    // base Url of the API
-    const baseUrl = "http://jsonplaceholder.typicode.com";
+   // uncomment and replace if want to access 3rd party endpoint over internet
+//    const baseUrl = "http://jsonplaceholder.typicode.com";
+    const baseUrl = "http://localhost:8080";
 
     // List component
     const List = {
@@ -12,8 +14,11 @@
         },
         methods: {
             getPosts() {
-                axios.get(baseUrl + `/posts`).then(response => {
+                // uncomment and replace if want to access 3rd party endpoint over internet
+//                axios.get(baseUrl + `/posts`).then(response => {
+                axios.get(baseUrl + `/api`).then(response => {
                     this.posts = response.data;
+                    console.log(this.posts);
                 }).catch(error => {
                     console.log(error);
                 })
@@ -33,7 +38,9 @@
         methods: {
             getPosts() {
                 var id = this.$route.params.id;
-                axios.get(baseUrl + `/posts/` + id).then(response => {
+                // uncomment and replace if want to access 3rd party endpoint over internet
+//                axios.get(baseUrl + `/posts/` + id).then(response => {
+                axios.get(baseUrl + `/api/` + id).then(response => {
                     this.post = response.data
                 }).catch(error => {
                     console.log(error);

@@ -25,3 +25,4 @@
 /.nb-gradle/
 /spring-boot-vue-demo.iml
 /.idea/
+/src/main/resources/static/built/

@@ -8,17 +8,10 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @Controller
 public class BlogSearchVueEndPoint {
 
-    private static final String VUE_API_PATH = "/blogs";
-    private static final String VUE_SEARCH_API_PATH = "/search";
+    private static final String FRONT_END = "/";
 
-
-    @RequestMapping(value = VUE_API_PATH, method = GET)
-    public String indexVue() {
-        return "index1";
-    }
-
-    @RequestMapping(value = VUE_SEARCH_API_PATH, method = GET)
-    public String searchVue() {
-        return "search";
+    @RequestMapping(value = FRONT_END, method = GET)
+    public String index() {
+        return "index";
     }
 }
