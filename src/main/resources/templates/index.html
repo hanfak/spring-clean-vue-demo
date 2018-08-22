@@ -12,27 +12,8 @@
     <router-view/>
 </div>
 
-<template id="list-template">
-    <div>
-        <input v-model="search" placeholder="Enter search terms">
-        <p>Displaying {{ filteredPosts.length }} posts, filtered by <strong>{{ search }}</strong></p>
-        <p>{{ word() }}</p>
-        <ul>
-            <li v-for="post in filteredPosts">
-                <router-link :to="{ name: 'post', params: { id: post.id }}">
-                    {{post.title}}
-                </router-link>
-            </li>
-        </ul>
-    </div>
-</template>
-<template id="post-template">
-    <div>
-        <router-link :to="{ name: 'homepage' }">Homepage</router-link>
-        <h3>{{post.title}}</h3>
-        {{post.body}}
-    </div>
-</template>
+<list></list>
+<post></post>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://vuejs.org/js/vue.js"></script>

@@ -1,8 +1,13 @@
 const baseUrl = "http://localhost:8080";
-
+const templateHtml = "<div>" +
+                         "<router-link :to=\"{ name: 'homepage' }\">Homepage</router-link>" +
+                          "<h3>{{post.title}}</h3>" +
+                          "{{post.body}}" +
+                      "</div>";
 // Post component
 export const Post = {
-    template: '#post-template',
+    name: 'post',
+    template: templateHtml,
     data: () => ({
         post: null
     }),
