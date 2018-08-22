@@ -1,7 +1,18 @@
-.posts-main {
-    border-collapse: collapse;
+body {
+    width: 40rem;
+    margin: 1rem auto;
+    font-family: sans-serif;
 }
 
-h3 {
-    color:red
+a {
+    color: black;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.25rem;
+    font-size: 1rem;
 }

@@ -21,7 +21,7 @@ NOTES:
 
 # Run
 
-1. run `mvn clean install`
+1. run `mvn clean install -DskipTests`
 2. run main in `springbootvuedemo/SpringBootVueDemoApplication.java`
 3. go to `localhost:8080/` for front end
 4. go to `localhost:8080/api` for api

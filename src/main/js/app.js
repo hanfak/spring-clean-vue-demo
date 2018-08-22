@@ -6,9 +6,10 @@
     // List component
     const List = {
         template: '#list-template',
-        data: () => ({
-            posts: []
-        }),
+		data: () => ({
+			posts: [],
+			search: ""
+		}),
         mounted() {
             this.getPosts();
         },
@@ -22,6 +23,17 @@
                 }).catch(error => {
                     console.log(error);
                 })
+            },
+            word() {
+                return "bye bye";
+            }
+
+        },
+        computed: {
+            filteredPosts() {
+              return this.posts.filter(post => {
+                 return post.title.includes(this.search);
+              })
             }
         }
     };

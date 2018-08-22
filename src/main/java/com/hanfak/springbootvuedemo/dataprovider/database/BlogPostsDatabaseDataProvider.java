@@ -10,7 +10,9 @@ import java.util.Optional;
 public class BlogPostsDatabaseDataProvider implements BlogRepository {
     private final Blog firstBlog = new Blog("first post", "Blah blah Blah blah Blah blah Blah blah ", 1);
     private final Blog secondBlog = new Blog("second post", "boo booo boo boooo ", 2);
-    private final List<Blog> blogPosts = Arrays.asList(firstBlog, secondBlog);
+    private final Blog thirdBlog = new Blog("third post", "king kond ", 3);
+    private final Blog fourthBlog = new Blog("fourth post", "zip zap zip ", 4);
+    private final List<Blog> blogPosts = Arrays.asList(firstBlog, secondBlog, thirdBlog, fourthBlog);
 
     @Override
     public List<Blog> getAllBlogPosts() {
