@@ -1,10 +1,7 @@
+import {templateHtml} from './html/PostHtml'
+
 const baseUrl = "http://localhost:8080";
-const templateHtml = "<div>" +
-                         "<router-link :to=\"{ name: 'homepage' }\">Homepage</router-link>" +
-                          "<h3>{{post.title}}</h3>" +
-                          "{{post.body}}" +
-                      "</div>";
-// Post component
+
 export const Post = {
     name: 'post',
     template: templateHtml,

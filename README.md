@@ -11,8 +11,10 @@
     - Figure out how to use
         - webpack
         - package.json
-- organise vuejs code into sepearate files
-   - By components
+- ~~organise vuejs code into sepearate files~~
+   - ~~By components~~
+- Organise css by component
+- Display some details of a post, not in the flitered list, as a pop up when hovering over
 
 
 NOTES:

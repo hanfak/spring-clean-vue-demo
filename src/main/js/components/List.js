@@ -1,18 +1,7 @@
-const baseUrl = "http://localhost:8080";
-const templateHtml = `<div>
-                          <input v-model="search" placeholder="Enter search terms">
-                          <p>Displaying {{ filteredPosts.length }} posts, filtered by <strong>{{ search }}</strong></p>
-                          <p>{{ word() }}</p>
-                          <ul>
-                              <li v-for="post in filteredPosts">
-                                  <router-link :to="{ name: 'post', params: { id: post.id }}">
-                                      {{post.title}}
-                                  </router-link>
-                              </li>
-                          </ul>
-                      </div>`
+import {templateHtml} from './html/ListHtml'
 
-// List component
+const baseUrl = "http://localhost:8080";
+
 export const List = {
     name: 'list',
     template: templateHtml,
