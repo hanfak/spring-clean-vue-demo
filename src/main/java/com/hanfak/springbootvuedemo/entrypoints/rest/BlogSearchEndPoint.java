@@ -25,12 +25,12 @@ public class BlogSearchEndPoint {
     }
 
     @RequestMapping(value = API_PATH, method = GET)
-    public List<Blog> index() {
+    public List<Blog> getAllBlogPosts() {
         return getAllBlogPostsUsecase.fetchAllBlogPosts();
     }
 
     @RequestMapping(value = "/api/{id}", method = GET)
-    public Blog show(@PathVariable String id) {
+    public Blog getABlogPost(@PathVariable String id) {
         return getBlogPostsUsecase.fetchBlogPostBy(parseInt(id));
     }
 }
