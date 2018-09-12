@@ -15,7 +15,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RestController
 public class BlogSearchEndPoint {
 
-    private static final String API_PATH = "/api";
+    public static final String API_PATH = "/api";
     private final GetAllBlogPostsUsecase getAllBlogPostsUsecase;
     private final GetBlogPostsUsecase getBlogPostsUsecase;
 
